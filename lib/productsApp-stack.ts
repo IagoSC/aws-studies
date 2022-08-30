@@ -5,7 +5,7 @@ import { Construct } from "constructs"
 
 export class ProductsAppStack extends cdk.Stack {
   
-  readonly fetchProductsHandler
+  readonly fetchProductsHandler : lambdaNodeJS.NodejsFunction
 
   constructor(scope: Construct, id: string, props?: cdk.StackProps){
     super(scope, id, props)
