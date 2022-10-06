@@ -17,7 +17,7 @@ export class ProductsAppStack extends cdk.Stack {
 		this.productsDdb = new dynamodb.Table(this, "ProductsDdb", {
 			tableName: "products",
 			partitionKey: {
-				name: "_id",
+				name: "id",
 				type: dynamodb.AttributeType.STRING
 			},
 			billingMode: dynamodb.BillingMode.PROVISIONED,
