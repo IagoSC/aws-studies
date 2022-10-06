@@ -9,7 +9,7 @@ export interface Product {
   model: string;
 }
 
-export class ProductsRepository {
+export class ProductRepository {
 	private ddbClient: DocumentClient;
 	private productsDdb: string;
 
@@ -25,6 +25,7 @@ export class ProductsRepository {
 
 		return data.Items as Product[];
 	}
+
 
 	async getProductId(productId: string): Promise<Product>{
 		const data = await this.ddbClient.get({
