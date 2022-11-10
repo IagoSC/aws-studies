@@ -73,5 +73,4 @@ export async function handler(event: APIGatewayProxyEvent, context: Context): Pr
 			message: "Bad request",
 		})
 	};
-
 }
