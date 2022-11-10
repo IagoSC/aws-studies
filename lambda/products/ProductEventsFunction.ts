@@ -25,7 +25,7 @@ export async function handler (event: ProductEvent, context: Context, callback:C
 
 async function createEvent (event: ProductEvent) {
 	const timestamp = Date.now();
-	const ttl = (timestamp/1000 + 5*60);
+	const ttl = ~~(timestamp/1000 + 5*60);
 
 	return ddbClient.put({
 		TableName: eventsDdb,
