@@ -82,7 +82,8 @@ export class ProductRepository {
 				":p": product.price,
 				":m": product.model,
 				":u": product.productUrl
-			}
+			},
+			ReturnValues: "ALL_OLD"
 		}).promise();
 		data.Attributes!.id = productId;
 		return data.Attributes as Product;
